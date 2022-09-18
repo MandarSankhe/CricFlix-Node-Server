@@ -3,7 +3,7 @@ let Movie = require('../models/movie.model');
 
 router.route('/').get((req, res) => {
     Movie.find()
-        .then(users => res.json(users))
+        .then(movies => res.json(movies))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
